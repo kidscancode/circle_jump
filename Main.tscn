@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/Jumper.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/Circle.tscn" type="PackedScene" id=2]
+
+[node name="Main" type="Node"]
+
+[node name="Jumper" parent="." instance=ExtResource( 1 )]
+position = Vector2( 93.7569, 225.416 )
+
+[node name="Circle" parent="." instance=ExtResource( 2 )]
+position = Vector2( 367.049, 241.374 )
+
