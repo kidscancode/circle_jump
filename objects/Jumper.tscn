@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/Jumper.gd" type="Script" id=1]
 [ext_resource path="res://objects/color.shader" type="Shader" id=2]
@@ -6,7 +6,10 @@
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
-shader_param/color = Color( 0.843137, 0.631373, 0.184314, 1 )
+shader_param/color = Color( 0.847059, 0.227451, 0.0392157, 1 )
+
+[sub_resource type="Gradient" id=2]
+colors = PoolColorArray( 0.85098, 0.65098, 0.054902, 0, 0.851562, 0.651978, 0.0532227, 1 )
 
 [node name="Jumper" type="Area2D"]
 script = ExtResource( 1 )
@@ -21,5 +24,15 @@ visible = false
 polygon = PoolVector2Array( 19.9982, 0.0478821, -20.663, -20.0641, -20.8817, 19.9413 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="Trail" type="Node" parent="."]
+
+[node name="Points" type="Line2D" parent="Trail"]
+z_index = -1
+gradient = SubResource( 2 )
+texture_mode = 0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [connection signal="area_entered" from="." to="." method="_on_Jumper_area_entered"]
