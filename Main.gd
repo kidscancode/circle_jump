@@ -28,5 +28,5 @@ func spawn_circle(_position=null):
 	
 func _on_Jumper_captured(object):
 	$Camera2D.position = object.position
-	object.capture()
+	object.capture(player)
 	call_deferred("spawn_circle")
