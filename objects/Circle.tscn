@@ -84,7 +84,9 @@ tracks/1/keys = {
 size = 64
 font_data = ExtResource( 4 )
 
-[node name="Circle" type="Area2D"]
+[node name="Circle" type="Area2D" groups=[
+"circles",
+]]
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -121,4 +123,3 @@ custom_fonts/font = SubResource( 5 )
 text = "1"
 align = 1
 valign = 1
-

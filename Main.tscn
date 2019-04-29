@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://UI/Screens.tscn" type="PackedScene" id=2]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -9,9 +10,11 @@ script = ExtResource( 1 )
 position = Vector2( 219.144, 689.962 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 296.187, 633.464 )
+position = Vector2( 215.94, 674.803 )
 offset = Vector2( 0, -200 )
 current = true
 smoothing_enabled = true
 smoothing_speed = 8.0
 
+[node name="Screens" parent="." instance=ExtResource( 2 )]
+[connection signal="start_game" from="Screens" to="." method="new_game"]
