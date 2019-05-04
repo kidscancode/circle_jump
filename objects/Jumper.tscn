@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://objects/Jumper.gd" type="Script" id=1]
 [ext_resource path="res://objects/color.shader" type="Shader" id=2]
 [ext_resource path="res://assets/images/jumper.png" type="Texture" id=3]
+[ext_resource path="res://assets/audio/70.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/88.ogg" type="AudioStream" id=5]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
@@ -30,9 +32,15 @@ polygon = PoolVector2Array( 19.9982, 0.0478821, -20.663, -20.0641, -20.8817, 19.
 [node name="Points" type="Line2D" parent="Trail"]
 z_index = -1
 gradient = SubResource( 2 )
-texture_mode = 0
+texture_mode = 256
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Capture" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 [connection signal="area_entered" from="." to="." method="_on_Jumper_area_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

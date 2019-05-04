@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://objects/Circle.gd" type="Script" id=1]
 [ext_resource path="res://objects/color.shader" type="Shader" id=2]
 [ext_resource path="res://assets/images/circle1_n.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/audio/89.ogg" type="AudioStream" id=5]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
@@ -123,3 +124,6 @@ custom_fonts/font = SubResource( 5 )
 text = "1"
 align = 1
 valign = 1
+
+[node name="Beep" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
