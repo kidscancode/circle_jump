@@ -33,3 +33,21 @@ var color_schemes = {
 }
 
 var theme = color_schemes["NEON1"]
+
+static func rand_weighted(weights):
+	var sum = 0
+	for weight in weights:
+		sum += weight
+	var num = rand_range(0, sum)
+	for i in weights.size():
+		if num < weights[i]:
+			return i
+		num -= weights[i]
+		
+		
+	
+	
+		
+		
+	
+	
