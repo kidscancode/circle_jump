@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/images/circle1_n.png" type="Texture" id=1]
+
+[node name="Background" type="CanvasLayer"]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color( 1, 1, 1, 0.396078 )
+position = Vector2( 240, -100 )
+rotation = 1.5708
+amount = 4
+lifetime = 20.0
+preprocess = 20.0
+texture = ExtResource( 1 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 240 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 0.6
+scale_amount = 0.2
+scale_amount_random = 0.2
+hue_variation = 0.5
+hue_variation_random = 1.0

@@ -26,7 +26,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 64 ]
+"values": [ 80 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Message:visible")

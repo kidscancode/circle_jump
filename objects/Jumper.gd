@@ -6,7 +6,7 @@ signal died
 onready var trail = $Trail/Points
 
 var velocity = Vector2(100, 0)
-var jump_speed = 1000
+var jump_speed = 1500
 var target = null
 var trail_length = 25
 

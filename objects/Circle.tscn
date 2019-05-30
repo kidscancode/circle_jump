@@ -24,10 +24,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.42 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ true, false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("SpriteEffect:scale")
@@ -48,7 +48,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.46 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.560784 ) ]
@@ -95,12 +95,14 @@ material = SubResource( 1 )
 texture = ExtResource( 3 )
 
 [node name="SpriteEffect" type="Sprite" parent="."]
-self_modulate = Color( 1, 1, 1, 0 )
+visible = false
+self_modulate = Color( 1, 1, 1, 0.51202 )
 material = SubResource( 1 )
-scale = Vector2( 3, 3 )
+scale = Vector2( 0.480009, 0.480009 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 2 )
 
 [node name="Pivot" type="Node2D" parent="."]

@@ -5,8 +5,8 @@ onready var move_tween = $MoveTween
 
 enum MODES {STATIC, LIMITED}
 
-var radius = 100
-var rotation_speed = PI
+var radius = 80
+var rotation_speed = 4
 var mode = MODES.STATIC
 var move_range = 0
 var move_speed = 2.0

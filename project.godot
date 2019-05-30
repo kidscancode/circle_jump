@@ -23,6 +23,11 @@ config/icon="res://icon.png"
 
 settings="*res://settings.gd"
 
+[debug]
+
+gdscript/warnings/unused_class_variable=false
+gdscript/warnings/unused_argument=false
+
 [display]
 
 window/size/width=480
@@ -37,4 +42,7 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
 environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false
