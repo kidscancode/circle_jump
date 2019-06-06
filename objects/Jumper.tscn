@@ -26,6 +26,7 @@ texture = ExtResource( 3 )
 polygon = PoolVector2Array( 17, 0, -16, -16, -16, 16 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
 
 [node name="Trail" type="Node" parent="."]
 

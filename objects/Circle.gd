@@ -5,7 +5,7 @@ onready var move_tween = $MoveTween
 
 enum MODES {STATIC, LIMITED}
 
-var radius = 80
+var radius = 120
 var rotation_speed = 4
 var mode = MODES.STATIC
 var move_range = 0
@@ -29,10 +29,10 @@ func init(_position, level=1):
 	$Sprite.material = $Sprite.material.duplicate()
 	$SpriteEffect.material = $Sprite.material
 	$CollisionShape2D.shape = $CollisionShape2D.shape.duplicate()
-	$CollisionShape2D.shape.radius = radius
+	$CollisionShape2D.shape.radius = radius - 25
 	var img_size = $Sprite.texture.get_size().x / 2
 	$Sprite.scale = Vector2(1, 1) * radius / img_size
-	orbit_position.position.x = radius + 25
+	orbit_position.position.x = radius
 	rotation_speed *= pow(-1, randi() % 2)
 	set_tween()
 
@@ -81,7 +81,7 @@ func capture(target):
 		
 func _draw():
 	if jumper:
-		var r = ((radius - 10) / num_orbits) * (1 + num_orbits - current_orbits)
+		var r = ((radius - 50) / num_orbits) * (1 + num_orbits - current_orbits)
 		draw_circle_arc_poly(Vector2.ZERO, r, orbit_start + PI/2,
 							$Pivot.rotation + PI/2, settings.theme["circle_fill"])
 												

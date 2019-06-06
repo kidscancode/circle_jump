@@ -1,21 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://UI/Screens.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/audio/Music_Light-Puzzles.ogg" type="AudioStream" id=4]
 [ext_resource path="res://UI/Background.tscn" type="PackedScene" id=5]
-
-[sub_resource type="Environment" id=1]
-background_mode = 4
-glow_enabled = true
-glow_levels/1 = true
-glow_levels/2 = true
-glow_levels/4 = true
-glow_levels/5 = false
-glow_intensity = 0.37
-glow_blend_mode = 0
-glow_hdr_threshold = 0.64
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -38,7 +27,4 @@ smoothing_speed = 8.0
 stream = ExtResource( 4 )
 
 [node name="Background" parent="." instance=ExtResource( 5 )]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 1 )
 [connection signal="start_game" from="Screens" to="." method="new_game"]
