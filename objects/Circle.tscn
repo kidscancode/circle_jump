@@ -2,7 +2,7 @@
 
 [ext_resource path="res://objects/Circle.gd" type="Script" id=1]
 [ext_resource path="res://objects/circle_glow.shader" type="Shader" id=2]
-[ext_resource path="res://assets/images/circle1_n.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/circle_1.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/audio/89.ogg" type="AudioStream" id=5]
 
