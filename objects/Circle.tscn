@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://objects/Circle.gd" type="Script" id=1]
-[ext_resource path="res://objects/color.shader" type="Shader" id=2]
+[ext_resource path="res://objects/circle_glow.shader" type="Shader" id=2]
 [ext_resource path="res://assets/images/circle1_n.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/audio/89.ogg" type="AudioStream" id=5]
@@ -9,6 +9,9 @@
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
 shader_param/color = Color( 0.266667, 1, 0, 1 )
+shader_param/speed = 0.0
+shader_param/radius = 0.282
+shader_param/width = 0.135
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 128.501

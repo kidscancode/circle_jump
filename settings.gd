@@ -1,5 +1,6 @@
 extends Node
 
+var score_file = "user://highscore.save"
 var enable_sound = true
 var enable_music = true
 
