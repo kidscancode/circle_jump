@@ -14,6 +14,7 @@ func _ready():
 	$HUD.hide()
 	
 func new_game():
+	settings.hide_ad_banner()
 	self.score = 0
 	level = 1
 	$HUD.update_score(score)
@@ -60,6 +61,7 @@ func _on_Jumper_died():
 	$HUD.hide()
 	if settings.enable_music:
 		$Music.stop()
+	settings.show_ad_interstitial()
 
 func load_score():
 	var f = File.new()

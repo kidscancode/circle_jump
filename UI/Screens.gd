@@ -22,6 +22,12 @@ func _on_button_pressed(button):
 	if settings.enable_sound:
 		$Click.play()
 	match button.name:
+		"Ads":
+			settings.enable_ads = !settings.enable_ads
+			if settings.enable_ads:
+				button.text = "Disable Ads"
+			else:
+				button.text = "Enable Ads"
 		"Home":
 			change_screen($TitleScreen)
 		"Play":
