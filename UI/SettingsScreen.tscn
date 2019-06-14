@@ -20,7 +20,7 @@
 size = 48
 font_data = ExtResource( 4 )
 
-[node name="SettingsScreen" index="0" instance=ExtResource( 1 )]
+[node name="SettingsScreen" instance=ExtResource( 1 )]
 
 [node name="Label" parent="MarginContainer/VBoxContainer" index="0"]
 text = "Settings"

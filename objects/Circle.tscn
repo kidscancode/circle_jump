@@ -19,7 +19,6 @@ radius = 128.501
 [sub_resource type="Animation" id=3]
 resource_name = "capture"
 length = 0.5
-step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpriteEffect:visible")
 tracks/0/interp = 1
@@ -98,10 +97,9 @@ material = SubResource( 1 )
 texture = ExtResource( 3 )
 
 [node name="SpriteEffect" type="Sprite" parent="."]
-visible = false
-self_modulate = Color( 1, 1, 1, 0.51202 )
+self_modulate = Color( 1, 1, 1, 0 )
 material = SubResource( 1 )
-scale = Vector2( 0.480009, 0.480009 )
+scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

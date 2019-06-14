@@ -1,8 +1,23 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://UI/BaseScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/buttons/right.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/buttons/gear.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+font_data = ExtResource( 4 )
 
 [node name="TitleScreen" instance=ExtResource( 1 )]
 
@@ -28,6 +43,24 @@ margin_right = 357.0
 margin_bottom = 100.0
 texture_normal = ExtResource( 3 )
 
-[node name="Buttons2" parent="MarginContainer/VBoxContainer" index="2"]
+[node name="Buttons3" parent="MarginContainer/VBoxContainer" index="2"]
 margin_top = 478.0
 margin_bottom = 478.0
+
+[node name="Buttons2" parent="MarginContainer/VBoxContainer" index="3"]
+margin_top = 628.0
+margin_bottom = 667.0
+
+[node name="About" type="Button" parent="MarginContainer/VBoxContainer/Buttons2" index="0" groups=[
+"buttons",
+]]
+margin_left = 169.0
+margin_right = 271.0
+margin_bottom = 39.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "About"

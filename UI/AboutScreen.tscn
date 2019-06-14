@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/BaseScreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/images/buttons/return.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="AboutScreen" index="0" instance=ExtResource( 1 )]
+
+[node name="Label" parent="MarginContainer/VBoxContainer" index="0"]
+text = ""
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" index="1"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 460.0
+margin_bottom = 834.0
+
+[node name="TextEdit" type="RichTextLabel" parent="MarginContainer/VBoxContainer2" index="0"]
+margin_right = 440.0
+margin_bottom = 710.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center][u]Circle Jump[/u]
+
+[img]res://assets/images/godot_logo.png[/img][/center]
+
+Circle Jump is an open source tutorial game made with the Godot Game Engine. You can find the tutorial and the game's source code here:
+
+[url=https://github.com/kidscancode/circle_jump]Circle Jump Source[/url]
+
+Copyright © 2019 KidsCanCode
+
+[url=https://github.com/kidscancode/circle_jump/blob/master/LICENSE]License Information[/url]"
+text = "Circle Jump
+
+
+
+Circle Jump is an open source tutorial game made with the Godot Game Engine. You can find the tutorial and the game's source code here:
+
+Circle Jump Source
+
+Copyright © 2019 KidsCanCode
+
+License Information"
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer2" index="1"]
+margin_top = 714.0
+margin_right = 440.0
+margin_bottom = 814.0
+
+[node name="Home" type="TextureButton" parent="MarginContainer/VBoxContainer2/CenterContainer" index="0" groups=[
+"buttons",
+]]
+margin_left = 170.0
+margin_right = 270.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 3 )
+[connection signal="meta_clicked" from="MarginContainer/VBoxContainer2/TextEdit" to="." method="_on_TextEdit_meta_clicked"]
