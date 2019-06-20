@@ -21,7 +21,7 @@ modules="org/godotengine/godot/GodotAdMob"
 
 config/name="circle_jump"
 run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://logo1_64.png"
 
 [autoload]
 

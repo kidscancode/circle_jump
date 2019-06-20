@@ -21,7 +21,7 @@ margin_left = 20.0
 margin_top = 20.0
 margin_right = 460.0
 margin_bottom = 834.0
-custom_constants/separation = 150
+custom_constants/separation = 125
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_right = 440.0
@@ -31,23 +31,23 @@ text = "Title"
 align = 1
 
 [node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 228.0
+margin_top = 203.0
 margin_right = 440.0
-margin_bottom = 228.0
+margin_bottom = 203.0
 custom_constants/separation = 75
 alignment = 1
 
 [node name="Buttons3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 378.0
+margin_top = 328.0
 margin_right = 440.0
-margin_bottom = 378.0
+margin_bottom = 328.0
 custom_constants/separation = 75
 alignment = 1
 
 [node name="Buttons2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 528.0
+margin_top = 453.0
 margin_right = 440.0
-margin_bottom = 528.0
+margin_bottom = 453.0
 custom_constants/separation = 75
 alignment = 1
 

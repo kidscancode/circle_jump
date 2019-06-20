@@ -9,7 +9,7 @@ var circles_per_level = 5
 
 var color_schemes = {
 	"NEON1": {
-		'background': Color8(0, 0, 0),
+		'background': Color8(50, 50, 70),
 		'player_body': Color8(203, 255, 0),
 		'player_trail': Color8(204, 0, 255),
 		'circle_fill': Color8(255, 0, 110), 
@@ -25,7 +25,7 @@ var color_schemes = {
 		'circle_limited': Color8(127, 0, 255)
 	},
 	"NEON3": {
-		'background': Color8(0, 0, 0),
+		'background': Color8(76, 84, 95),
 		'player_body': Color8(255, 0, 187),
 		'player_trail': Color8(255, 148, 0),
 		'circle_fill': Color8(255, 148, 0),

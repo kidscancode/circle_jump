@@ -27,4 +27,6 @@ smoothing_speed = 8.0
 stream = ExtResource( 4 )
 
 [node name="Background" parent="." instance=ExtResource( 5 )]
+
+[node name="MusicFade" type="Tween" parent="."]
 [connection signal="start_game" from="Screens" to="." method="new_game"]

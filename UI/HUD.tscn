@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/HUD.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
@@ -9,9 +9,42 @@ size = 32
 extra_spacing_top = 10
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=5]
+size = 48
+font_data = ExtResource( 2 )
+
 [sub_resource type="DynamicFont" id=2]
 size = 69
 font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "bonus"
+length = 0.15
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("BonusBox/Bonus:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.07, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BonusBox/Bonus:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.07, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "init"
@@ -119,6 +152,24 @@ size_flags_vertical = 5
 custom_fonts/font = ExtResource( 3 )
 text = "100"
 
+[node name="BonusBox" type="MarginContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 40.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="Bonus" type="Label" parent="BonusBox"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 460.0
+margin_bottom = 78.0
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "1x"
+
 [node name="Message" type="Label" parent="."]
 anchor_top = 0.5
 anchor_right = 1.0
@@ -134,5 +185,6 @@ clip_text = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "init"
+anims/bonus = SubResource( 6 )
 anims/init = SubResource( 3 )
 anims/show_message = SubResource( 4 )
