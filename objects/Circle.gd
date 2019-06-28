@@ -65,7 +65,7 @@ func check_orbits():
 			if settings.enable_sound:
 				$Beep.play()
 			$Label.text = str(num_orbits - current_orbits)
-			if current_orbits <= 0:
+			if current_orbits >= num_orbits:
 				jumper.die()
 				jumper = null
 				implode()

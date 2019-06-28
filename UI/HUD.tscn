@@ -9,15 +9,11 @@ size = 32
 extra_spacing_top = 10
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=5]
-size = 48
-font_data = ExtResource( 2 )
-
 [sub_resource type="DynamicFont" id=2]
 size = 69
 font_data = ExtResource( 2 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 resource_name = "bonus"
 length = 0.15
 step = 0.01
@@ -46,11 +42,40 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
+resource_name = "score"
+length = 0.25
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScoreBox/HBoxContainer/Score:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScoreBox/HBoxContainer/Score:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.12, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
 resource_name = "init"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Message:custom_fonts/font:size")
+tracks/0/path = NodePath("Message:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -59,22 +84,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 80 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Message:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 resource_name = "show_message"
 length = 0.75
 step = 0.01
@@ -112,7 +125,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.75 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ) ]
 }
 
 [node name="HUD" type="CanvasLayer"]
@@ -123,6 +136,8 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -118.0
+grow_horizontal = 0
+grow_vertical = 0
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
@@ -133,24 +148,29 @@ margin_left = 20.0
 margin_top = 20.0
 margin_right = 460.0
 margin_bottom = 98.0
+grow_horizontal = 0
+grow_vertical = 0
 custom_constants/separation = 10
 alignment = 2
 
 [node name="Label" type="Label" parent="ScoreBox/HBoxContainer"]
-margin_left = 199.0
-margin_right = 295.0
+margin_left = 289.0
+margin_right = 385.0
 margin_bottom = 78.0
 size_flags_vertical = 5
 custom_fonts/font = SubResource( 1 )
 text = "Score"
 
 [node name="Score" type="Label" parent="ScoreBox/HBoxContainer"]
-margin_left = 305.0
+margin_left = 395.0
 margin_right = 440.0
 margin_bottom = 78.0
+grow_horizontal = 0
+grow_vertical = 0
 size_flags_vertical = 5
 custom_fonts/font = ExtResource( 3 )
-text = "100"
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
 
 [node name="BonusBox" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -164,9 +184,9 @@ custom_constants/margin_bottom = 20
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 460.0
-margin_bottom = 78.0
+margin_bottom = 104.0
 size_flags_vertical = 5
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "1x"
 
@@ -177,14 +197,23 @@ anchor_bottom = 0.5
 margin_top = -39.0
 margin_bottom = 39.0
 grow_vertical = 2
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "Message"
 align = 1
 valign = 1
 clip_text = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="BonusAnimation" type="AnimationPlayer" parent="."]
 autoplay = "init"
-anims/bonus = SubResource( 6 )
-anims/init = SubResource( 3 )
-anims/show_message = SubResource( 4 )
+anims/bonus = SubResource( 3 )
+
+[node name="ScoreAnimation" type="AnimationPlayer" parent="."]
+anims/score = SubResource( 4 )
+
+[node name="MessageAnimation" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/init = SubResource( 6 )
+anims/show_message = SubResource( 5 )
+
+[node name="Tween" type="Tween" parent="."]
+[connection signal="tween_step" from="Tween" to="." method="_on_Tween_tween_step"]
