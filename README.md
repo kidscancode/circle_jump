@@ -1,8 +1,10 @@
 # Circle Jump: A Godot Engine Game
 
-A mobile game tutorial for Godot Game Engine.
+![](http://kidscancode.org/godot_recipes/img/cj_banner_002.png)
 
-![](http://kidscancode.org/godot_recipes/img/jump.gif)
+**Circle Jump** is a mobile game you can learn to make using the Godot Game Engine.
 
-Follow the development here:
-[Godot Lessons: Circle Jump](http://kidscancode.org/godot_recipes/games/circle_jump/)
+You can follow the development here (written and video tutorials):
+[Game Tutorial: Circle Jump](http://kidscancode.org/godot_recipes/games/circle_jump/)
+
+![](http://kidscancode.org/godot_recipes/img/circle_jump.gif)
