@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/chris/Documents/godot3_projects/circle_jump/android/build/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-uz/values-uz.xml",
+            "map": [
+                {
+                    "source": "/Users/chris/.gradle/caches/transforms-2/files-2.1/4a4088a7d1fafd90d3f3cd7fb68ab04e/res/values-uz/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "208",
+                        "endOffsets": "455"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "208",
+                        "endOffsets": "309"
+                    }
+                },
+                {
+                    "source": "/Users/chris/.gradle/caches/transforms-2/files-2.1/4e7e3287f351449da7c3b8557eb93479/res/values-uz/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "199,270,385,455,522,604,717",
+                        "endColumns": "70,114,69,66,81,112,69",
+                        "endOffsets": "269,384,454,521,603,716,786"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "314,389,508,582,653,739,856",
+                        "endColumns": "74,118,73,70,85,116,73",
+                        "endOffsets": "384,503,577,648,734,851,925"
+                    }
+                },
+                {
+                    "source": "/Users/chris/.gradle/caches/transforms-2/files-2.1/137d6a450de3fab4d5e93acf00be5424/res/values-uz/values-uz.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "930",
+                        "endColumns": "100",
+                        "endOffsets": "1026"
+                    }
+                }
+            ]
+        }
+    ]
+}

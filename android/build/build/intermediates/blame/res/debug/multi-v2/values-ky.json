@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/chris/Documents/godot3_projects/circle_jump/android/build/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml",
+            "map": [
+                {
+                    "source": "/Users/chris/.gradle/caches/transforms-2/files-2.1/137d6a450de3fab4d5e93acf00be5424/res/values-ky/values-ky.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "922",
+                        "endColumns": "100",
+                        "endOffsets": "1018"
+                    }
+                },
+                {
+                    "source": "/Users/chris/.gradle/caches/transforms-2/files-2.1/4e7e3287f351449da7c3b8557eb93479/res/values-ky/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "199,270,375,443,511,591,686",
+                        "endColumns": "70,104,67,67,79,94,80",
+                        "endOffsets": "269,374,442,510,590,685,766"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "326,401,510,582,654,738,837",
+                        "endColumns": "74,108,71,71,83,98,84",
+                        "endOffsets": "396,505,577,649,733,832,917"
+                    }
+                },
+                {
+                    "source": "/Users/chris/.gradle/caches/transforms-2/files-2.1/4a4088a7d1fafd90d3f3cd7fb68ab04e/res/values-ky/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "220",
+                        "endOffsets": "467"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "220",
+                        "endOffsets": "321"
+                    }
+                }
+            ]
+        }
+    ]
+}

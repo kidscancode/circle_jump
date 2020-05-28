@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g>ର Google Play ସେବା ସହ ଏକ ସମସ୍ୟା ରହିଛି। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।"</string>
+    <string msgid="368094699078615544" name="s1">"ଇମେଜ୍ ସେଭ୍‌ କରନ୍ତୁ"</string>
+    <string msgid="4550830452390689489" name="s2">"ପିକ୍‌ଚର୍‌ ଗ୍ୟାଲେରୀରେ ଇମେଜ୍‌ଗୁଡ଼ିକ ଷ୍ଟୋର୍‌ କରିବା ପାଇଁ ବିଜ୍ଞାପନକୁ ଅନୁମତି ଦେବେ?"</string>
+    <string msgid="2435407834265420668" name="s3">"ଗ୍ରହଣ କରନ୍ତୁ"</string>
+    <string msgid="9167523597401839819" name="s4">"ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତୁ"</string>
+    <string msgid="1566682516266724847" name="s5">"କ୍ୟାଲେଣ୍ଡର୍‌ ଇଭେଣ୍ଟ ତିଆରି କରନ୍ତୁ"</string>
+    <string msgid="5996672174517137271" name="s6">"ଏକ କ୍ୟାଲେଣ୍ଡର୍ ଇଭେଣ୍ଟ ତିଆରି କରିବା ପାଇଁ ବିଜ୍ଞାପନକୁ ଅନୁମତି ଦେବେ କି?"</string>
+    <string msgid="7163549807207034258" name="s7">"ପରୀକ୍ଷାମୂଳକ ବିଜ୍ଞାପନ"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+</resources>

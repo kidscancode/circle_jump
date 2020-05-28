@@ -12,12 +12,16 @@ func show_message(text):
 func hide():
 	$ScoreBox.hide()
 	$BonusBox.hide()
+	$StartTip.hide()
 	
 func show():
 	$ScoreBox.show()
 	$BonusBox.show()
+	$StartTip.show()
 	
 func update_score(score, value):
+	if value > 0 and $StartTip.visible:
+		$StartTip.hide()
 	$Tween.interpolate_property(self, "score", score,
 			value, 0.25, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	$Tween.start()

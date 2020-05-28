@@ -75,6 +75,7 @@ func _on_Jumper_died():
 	$HUD.hide()
 	if settings.enable_music:
 		fade_music()
+	yield(get_tree().create_timer(1.0), "timeout")
 	settings.show_ad_interstitial()
 
 func load_score():
@@ -100,3 +101,11 @@ func fade_music():
 func set_bonus(value):
 	bonus = value
 	$HUD.update_bonus(bonus)
+
+#func _notification(what):
+#	if what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST:
+#		print("go back")
+#	if what == MainLoop.NOTIFICATION_WM_FOCUS_OUT:
+#		print("focus out")
+#	if what == MainLoop.NOTIFICATION_WM_FOCUS_IN:
+#		print("focus in")

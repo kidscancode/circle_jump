@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"「<ns1:g id="APP_NAME">%1$s</ns1:g>」無法存取 Google Play 服務，請再試一次。"</string>
+    <string name="godot_project_name_string">godot-project-name-zh_TW</string>
+    <string msgid="368094699078615544" name="s1">"儲存圖片"</string>
+    <string msgid="4550830452390689489" name="s2">"要允許廣告將圖片儲存在相片庫中嗎？"</string>
+    <string msgid="2435407834265420668" name="s3">"接受"</string>
+    <string msgid="9167523597401839819" name="s4">"拒絕"</string>
+    <string msgid="1566682516266724847" name="s5">"建立日曆活動"</string>
+    <string msgid="5996672174517137271" name="s6">"要允許廣告建立日曆活動嗎？"</string>
+    <string msgid="7163549807207034258" name="s7">"測試廣告"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+</resources>

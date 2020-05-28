@@ -21,7 +21,8 @@ modules="org/godotengine/godot/GodotAdMob"
 
 config/name="circle_jump"
 run/main_scene="res://Main.tscn"
-config/icon="res://logo1_64.png"
+config/icon="res://cj_icon_64.png"
+config/quit_on_go_back=false
 
 [autoload]
 
@@ -29,7 +30,6 @@ settings="*res://settings.gd"
 
 [debug]
 
-gdscript/warnings/unused_class_variable=false
 gdscript/warnings/unused_argument=false
 
 [display]

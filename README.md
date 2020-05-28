@@ -1,7 +1,6 @@
-# circle_jump
-A mobile game tutorial for Godot Game Engine.
+# Circle Jump: A Godot Engine Game
 
-Here's a preview taken from the prototype:
+A mobile game tutorial for Godot Game Engine.
 
 ![](http://kidscancode.org/godot_recipes/img/jump.gif)
 

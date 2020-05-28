@@ -71,7 +71,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "init"
 length = 0.1
 tracks/0/type = "value"
@@ -87,8 +87,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "show_message"
+[sub_resource type="Animation" id=6]
 length = 0.75
 step = 0.01
 tracks/0/type = "value"
@@ -203,6 +202,18 @@ align = 1
 valign = 1
 clip_text = true
 
+[node name="StartTip" type="Label" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -369.0
+margin_bottom = -320.0
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 1 )
+text = "Tap to jump!"
+align = 1
+
 [node name="BonusAnimation" type="AnimationPlayer" parent="."]
 autoplay = "init"
 anims/bonus = SubResource( 3 )
@@ -212,8 +223,8 @@ anims/score = SubResource( 4 )
 
 [node name="MessageAnimation" type="AnimationPlayer" parent="."]
 autoplay = "init"
-anims/init = SubResource( 6 )
-anims/show_message = SubResource( 5 )
+anims/init = SubResource( 5 )
+anims/show_message = SubResource( 6 )
 
 [node name="Tween" type="Tween" parent="."]
 [connection signal="tween_step" from="Tween" to="." method="_on_Tween_tween_step"]

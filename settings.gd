@@ -53,6 +53,7 @@ var banner_top = false
 var ad_banner_id = ""
 var ad_interstitial_id = ""
 var enable_ads = true setget set_enable_ads
+var interstitial_rate = 0.2
 	
 func _ready():
 	load_settings()
@@ -72,7 +73,10 @@ func hide_ad_banner():
 		
 func show_ad_interstitial():
 	if admob and enable_ads:
-		admob.showInterstitial()
+		if randf() < interstitial_rate:
+			admob.showInterstitial()
+		else:
+			show_ad_banner()
 		
 func _on_interstitial_close():
 	if admob and enable_ads:

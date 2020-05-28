@@ -5,3 +5,4 @@ __pycache__
 .idea
 .import/
 logs/
+apikey.properties

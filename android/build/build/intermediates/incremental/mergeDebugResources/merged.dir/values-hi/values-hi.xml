@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> को Google Play सेवाओं के साथ समस्या आ रही है. कृपया फिर से कोशिश करें."</string>
+    <string name="godot_project_name_string">godot-project-name-hi</string>
+    <string msgid="368094699078615544" name="s1">"इमेज सेव करें"</string>
+    <string msgid="4550830452390689489" name="s2">"विज्ञापन को तस्वीर गैलरी में इमेज सेव करने का अनुमति देना चाहते हैं?"</string>
+    <string msgid="2435407834265420668" name="s3">"मंज़ूरी दें"</string>
+    <string msgid="9167523597401839819" name="s4">"खारिज करें"</string>
+    <string msgid="1566682516266724847" name="s5">"कैलेंडर इवेंट बनाएं"</string>
+    <string msgid="5996672174517137271" name="s6">"विज्ञापन को कैलेंडर इवेंट बनाने दें?"</string>
+    <string msgid="7163549807207034258" name="s7">"जाँच विज्ञापन"</string>
+    <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+</resources>

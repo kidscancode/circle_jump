@@ -12,15 +12,15 @@ script = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 20
-custom_constants/margin_top = 20
+custom_constants/margin_top = 25
 custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
+custom_constants/margin_bottom = 25
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 margin_left = 20.0
-margin_top = 20.0
+margin_top = 25.0
 margin_right = 460.0
-margin_bottom = 834.0
+margin_bottom = 829.0
 custom_constants/separation = 125
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
