@@ -176,7 +176,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 1 warning</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Wed May 27 17:45:22 PDT 2020      </nav>
+Check performed at Tue Jun 02 21:30:24 PDT 2020      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -219,14 +219,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../../admob-plugin/src/GodotAdMob.java">../../../admob-plugin/src/GodotAdMob.java</a>:332</span>: <span class="message">Using <code>getString</code> to get device identifiers is not recommended.</span><br /><pre class="errorlines">
-<span class="lineno"> 329 </span><span class="javadoc"> */</span>
-<span class="lineno"> 330 </span>    <span class="keyword">private</span> String getAdmobDeviceId()
-<span class="lineno"> 331 </span>    {
-<span class="caretline"><span class="lineno"> 332 </span>        String android_id = <span class="warning">Settings.Secure.getString(activity.getContentResolver(), Settings.Secure.ANDROID_ID)</span>;</span>
-<span class="lineno"> 333 </span>        String deviceId = md5(android_id).toUpperCase(Locale.US);
-<span class="lineno"> 334 </span>        <span class="keyword">return</span> deviceId;
-<span class="lineno"> 335 </span>    }
+<span class="location"><a href="../../../admob-plugin/src/GodotAdMob.java">../../../admob-plugin/src/GodotAdMob.java</a>:320</span>: <span class="message">Using <code>getString</code> to get device identifiers is not recommended.</span><br /><pre class="errorlines">
+<span class="lineno"> 317 </span><span class="javadoc"> */</span>
+<span class="lineno"> 318 </span>    <span class="keyword">private</span> String getAdmobDeviceId()
+<span class="lineno"> 319 </span>    {
+<span class="caretline"><span class="lineno"> 320 </span>        String android_id = <span class="warning">Settings.Secure.getString(activity.getContentResolver(), Settings.Secure.ANDROID_ID)</span>;</span>
+<span class="lineno"> 321 </span>        String deviceId = md5(android_id).toUpperCase(Locale.US);
+<span class="lineno"> 322 </span>        <span class="keyword">return</span> deviceId;
+<span class="lineno"> 323 </span>    }
 </pre>
 
 </div>

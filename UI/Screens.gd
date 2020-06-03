@@ -1,6 +1,7 @@
 extends Node
 
 signal start_game
+signal a
 
 var sound_buttons = {true: preload("res://assets/images/buttons/audioOn.png"),
 					false: preload("res://assets/images/buttons/audioOff.png")}

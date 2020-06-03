@@ -47,47 +47,47 @@ static func rand_weighted(weights):
 		num -= weights[i]
 		
 var admob = null
-var real_ads = false
-var banner_top = false
-# Fill these from your AdMob account:
-var ad_banner_id = ""
-var ad_interstitial_id = ""
+#var real_ads = false
+#var banner_top = false
+## Fill these from your AdMob account:
+#var ad_banner_id = ""
+#var ad_interstitial_id = ""
 var enable_ads = true setget set_enable_ads
 var interstitial_rate = 0.2
 	
-func _ready():
-	load_settings()
-	if Engine.has_singleton("AdMob"):
-		admob = Engine.get_singleton("AdMob")
-		admob.init(real_ads, get_instance_id())
-		admob.loadBanner(ad_banner_id, banner_top)
-		admob.loadInterstitial(ad_interstitial_id)
+#func _ready():
+#	load_settings()
+#	if Engine.has_singleton("AdMob"):
+#		admob = Engine.get_singleton("AdMob")
+#		admob.initWithContentRating(real_ads, get_instance_id(), true, false, "G")
+#		admob.loadBanner(ad_banner_id, banner_top)
+#		admob.loadInterstitial(ad_interstitial_id)
 		
-func show_ad_banner():
-	if admob and enable_ads:
-		admob.showBanner()
-		
-func hide_ad_banner():
-	if admob:
-		admob.hideBanner()
-		
-func show_ad_interstitial():
-	if admob and enable_ads:
-		if randf() < interstitial_rate:
-			admob.showInterstitial()
-		else:
-			show_ad_banner()
-		
-func _on_interstitial_close():
-	if admob and enable_ads:
-		show_ad_banner()
+#func show_ad_banner():
+#	if admob and enable_ads:
+#		admob.showBanner()
+#
+#func hide_ad_banner():
+#	if admob:
+#		admob.hideBanner()
+#
+#func show_ad_interstitial():
+#	if admob and enable_ads:
+#		if randf() < interstitial_rate:
+#			admob.showInterstitial()
+#		else:
+#			show_ad_banner()
+#
+#func _on_interstitial_close():
+#	if admob and enable_ads:
+#		show_ad_banner()
 		
 func set_enable_ads(value):
 	enable_ads = value
 	if enable_ads:
-		show_ad_banner()
+		admob.show_banner()
 	if !enable_ads:
-		hide_ad_banner()
+		admob.hide_banner()
 	save_settings()
 		
 func save_settings():

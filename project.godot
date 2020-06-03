@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "Admob",
+"language": "GDScript",
+"path": "res://admob-lib/admob.gd"
+} ]
 _global_script_class_icons={
-
+"Admob": "res://admob-lib/icon.png"
 }
 
 [android]

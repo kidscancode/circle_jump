@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://UI/Screens.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/audio/Music_Light-Puzzles.ogg" type="AudioStream" id=4]
 [ext_resource path="res://UI/Background.tscn" type="PackedScene" id=5]
+[ext_resource path="res://admob-lib/admob.gd" type="Script" id=6]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -29,4 +30,15 @@ stream = ExtResource( 4 )
 [node name="Background" parent="." instance=ExtResource( 5 )]
 
 [node name="MusicFade" type="Tween" parent="."]
+
+[node name="Admob" type="Node" parent="."]
+script = ExtResource( 6 )
+is_real = false
+banner_on_top = false
+child_directed = true
 [connection signal="start_game" from="Screens" to="." method="new_game"]
+[connection signal="banner_failed_to_load" from="Admob" to="." method="_on_Admob_banner_failed_to_load"]
+[connection signal="banner_loaded" from="Admob" to="." method="_on_Admob_banner_loaded"]
+[connection signal="interstitial_closed" from="Admob" to="." method="_on_Admob_interstitial_closed"]
+[connection signal="interstitial_failed_to_load" from="Admob" to="." method="_on_Admob_interstitial_failed_to_load"]
+[connection signal="interstitial_loaded" from="Admob" to="." method="_on_Admob_interstitial_loaded"]

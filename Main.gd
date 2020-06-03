@@ -11,7 +11,12 @@ var new_highscore = false
 var level = 0
 var bonus = 0 setget set_bonus
 
+onready var admob = $Admob
+
 func _ready():
+	settings.admob = admob
+	admob.load_banner()
+	admob.load_interstitial()
 	randomize()
 	load_score()
 	$HUD.hide()
@@ -19,7 +24,7 @@ func _ready():
 	
 func new_game():
 	new_highscore = false
-	settings.hide_ad_banner()
+	admob.hide_banner()
 	self.score = 0
 	self.bonus = 0
 	num_circles = 0
@@ -76,7 +81,11 @@ func _on_Jumper_died():
 	if settings.enable_music:
 		fade_music()
 	yield(get_tree().create_timer(1.0), "timeout")
-	settings.show_ad_interstitial()
+	if settings.enable_ads:
+		if randf() < settings.interstitial_rate:
+			admob.show_interstitial()
+		else:
+			admob.show_banner()
 
 func load_score():
 	var f = File.new()
@@ -102,6 +111,14 @@ func set_bonus(value):
 	bonus = value
 	$HUD.update_bonus(bonus)
 
+#func set_enable_ads(value):
+#	settings.enable_ads = value
+#	if settings.enable_ads:
+#		admob.show_banner()
+#	if !settings.enable_ads:
+#		admob.hide_banner()
+#	settings.save_settings()
+	
 #func _notification(what):
 #	if what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST:
 #		print("go back")
@@ -109,3 +126,23 @@ func set_bonus(value):
 #		print("focus out")
 #	if what == MainLoop.NOTIFICATION_WM_FOCUS_IN:
 #		print("focus in")
+
+
+func _on_Admob_banner_failed_to_load(error_code):
+	print("Banner failed to load: Error code " + str(error_code) + "\n")
+
+
+func _on_Admob_banner_loaded():
+	print("Banner loaded\n")
+
+
+func _on_Admob_interstitial_closed():
+	print("Interstitial closed\n")
+
+
+func _on_Admob_interstitial_failed_to_load(error_code):
+	print("Interstitial failed to load: Error code " + str(error_code) + "\n")
+
+
+func _on_Admob_interstitial_loaded():
+	print("Interstitial loaded\n")
