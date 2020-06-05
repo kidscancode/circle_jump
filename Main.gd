@@ -110,14 +110,6 @@ func fade_music():
 func set_bonus(value):
 	bonus = value
 	$HUD.update_bonus(bonus)
-
-#func set_enable_ads(value):
-#	settings.enable_ads = value
-#	if settings.enable_ads:
-#		admob.show_banner()
-#	if !settings.enable_ads:
-#		admob.hide_banner()
-#	settings.save_settings()
 	
 #func _notification(what):
 #	if what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST:
