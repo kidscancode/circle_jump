@@ -8,3 +8,7 @@ You can follow the development here (written and video tutorials):
 [Game Tutorial: Circle Jump](http://kidscancode.org/godot_recipes/games/circle_jump/)
 
 ![](http://kidscancode.org/godot_recipes/img/circle_jump.gif)
+
+Get it from the [Google Play Store](https://play.google.com/store/apps/details?id=org.kidscancode.circlejump)
+
+Download from [Itch.io](https://kidscancode.itch.io/circle-jump)
