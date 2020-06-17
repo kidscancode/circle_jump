@@ -6,3 +6,4 @@ __pycache__
 .import/
 logs/
 apikey.properties
+android/

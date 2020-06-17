@@ -1,4 +1,0 @@
-#Mon Jun 01 22:08:56 PDT 2020
-base.0=/Users/chris/Documents/godot3_projects/circle_jump/android/build/build/intermediates/dex/debug/mergeDexDebug/out
-renamed.0=classes.dex
-path.0=classes.dex
