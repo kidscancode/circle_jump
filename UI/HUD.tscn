@@ -137,10 +137,14 @@ anchor_bottom = 1.0
 margin_top = -118.0
 grow_horizontal = 0
 grow_vertical = 0
+mouse_filter = 2
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
 custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScoreBox"]
 margin_left = 20.0
@@ -149,6 +153,7 @@ margin_right = 460.0
 margin_bottom = 98.0
 grow_horizontal = 0
 grow_vertical = 0
+mouse_filter = 2
 custom_constants/separation = 10
 alignment = 2
 
@@ -174,10 +179,14 @@ text = "0"
 [node name="BonusBox" type="MarginContainer" parent="."]
 anchor_right = 1.0
 margin_bottom = 40.0
+mouse_filter = 2
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
 custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Bonus" type="Label" parent="BonusBox"]
 margin_left = 20.0
@@ -201,6 +210,9 @@ text = "Message"
 align = 1
 valign = 1
 clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="StartTip" type="Label" parent="."]
 visible = false
